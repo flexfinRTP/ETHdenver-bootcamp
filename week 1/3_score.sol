@@ -18,7 +18,7 @@ contract Score {
         uint256 amount;
     }
 
-    Funder giver;
+    Funder giver; // this is a new 'Funder' called giver
 
     modifier onlyOwner {
         if (msg.sender == owner) {
