@@ -1,0 +1,25 @@
+Lecture 3 - 10/19/22
+
+ref data types - arr, 
+
+fyi.. alot of people use the _ in front of a parameter name so they can differentiate from a global variable
+
+private - only callable from the contract but not from inherited contracts
+all the views = https://codingsrc.com/wp-content/uploads/2019/06/Slide5-1.jpg
+
+modifier will not run until the function that has the modifier runs.
+
+function 'public' view will control what contract
+
+every public function call has an 'entry point' to attack or mofify the contract
+
+to restrict who can CALL the function think about the contract or users address
+
+'indexed' keyword indexs the events like a db would be indexed so that these addresses, etc. can be searched, for example.
+
+https://consensys.net/blog/developers/guide-to-events-and-logs-in-ethereum-smart-contracts/
+events and logs ^^^
+
+the way arrays and mapping are done are different.
+
+The allPossibleNumber array can be called within a function

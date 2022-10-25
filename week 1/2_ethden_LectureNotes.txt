@@ -1,0 +1,23 @@
+Lecture 2 - 10/18/22
+
+data is generall public. We want to show that the tx cam from a tx and the identity is private
+
+conensus client is repsonible for choosing the order of the tx. the execution clinet are the 'miners' that produce the blocks
+
+casper ffg was implemented in the ETH PoS. It sounded like casper from omg was canceled
+
+it takes about 6min for a eth pos validated block to go through
+
+each slot to validate a block, there could be empty slots
+
+there are aggregators that check the validitity of one merkle tree of tx instead of all the tx.
+
+The lbock and data is propogated throughout the network when a smart contract is deplyed
+
+nodes are keeping state of the system in the blockchain, tx's are updating the state and the blocks being syncrohinsly updated, keeps the state in agreement between nodes
+
+smart contract is compiled to bytecode before deploying to the blockchain. (this is the abi?, NO)
+
+Test contract by sending tx to contract to call functions within your contract
+
+REMIX ETH BROWSER IDE

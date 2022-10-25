@@ -1,0 +1,9 @@
+Lecture 4 - 10/20/22
+
+Solidity is compiled into bytecode. Byte code is used to calculate gas by operation. Some input data can be seen on a smart contract as bytecode.
+
+you should be using inheritance if you want to deploy many contracts in a single file. but in case you are deploying more than 1 independent contract in a single file then the compiler might select only the last one for deployment others will be skipped.
+
+revert is like an event for an error firing
+
+Just be sure to remove the hardhat library when you deploy to mainnet. There's been quite a few contracts that still have it in the contract :/
