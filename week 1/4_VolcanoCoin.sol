@@ -6,11 +6,19 @@ contract VolcanoCoin {
 
     uint public volcanoCoinTotalSupply = 10000;
     address public owner;
+    uint public balances;
 
-    mapping(address=>uint) abc;
-    mapping(address=>uint) def;
+    mapping(address=>uint) balances;
+    mapping(uint=>address) payments;
 
-    struct Paymnent{}
+    struct Balances{
+        address addr;
+        uint256 amount;
+    }
+    struct Paymnent{
+        uint256 amount;
+        address addr;
+    }
 
     modifier onlyOwner {
         if (msg.sender == owner) {
@@ -19,14 +27,20 @@ contract VolcanoCoin {
     }
 
     event totalSupplyIncreased(uint, address indexed);
+    event VolcanoCoinTransferred(uint, address);
 
-    constructor() {
+    constructor(address, uint) {
         owner = msg.sender;
+        address owner = volcanoCoinTotalSupply;
     }
 
 
     getTotalSupply() public view returns(uint) {
         return volcanoCoinTotalSupply;
+    }
+
+    getBalances() public view returns(uint) {
+        return balances;
     }
 
     increaseTotalSupplyByNumber(uint _newTotalSupply) public onlyOwner {
@@ -35,8 +49,10 @@ contract VolcanoCoin {
         emit totalSupplyIncreased(_newTotalSupply, msg.sender)
     }
 
-    transferVolcanoCoin() {
+    transferVolcanoCoin(uint balances) public returns(uint, address) {
+        address msg.sender balances = 
 
+        emit VolcanoCoinTransferred(balances, address)
     }
     // Don't need sender's address because the contract is called to send the msg.owner(no matter who the sender is)
     // If you included a sender address it would 'hardcode' the contract to only send the balance between the contract and hardcoded address.
